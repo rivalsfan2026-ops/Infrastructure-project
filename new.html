@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Infrastructure & Subsurface Sensing</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    color:white;
+    text-align:center;
+    background: linear-gradient(135deg,#1e3c72,#2a5298,#ff6a00,#ee0979);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+h1 {
+    font-size:50px;
+    color:#ffff00;
+    text-shadow:3px 3px 6px black;
+}
+
+h2 {
+    color:#00ffff;
+    margin-top:40px;
+}
+
+p {
+    width:80%;
+    margin:auto;
+    font-size:18px;
+    color:#ffffff;
+}
+
+button {
+    padding:15px 30px;
+    margin:10px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:linear-gradient(45deg,#ff512f,#dd2476);
+    color:white;
+    transition:0.3s;
+}
+
+button:hover {
+    transform:scale(1.1);
+}
+
+.chart-container {
+    width:90%;
+    max-width:800px;
+    height:500px;
+    margin:auto;
+}
+
+canvas {
+    width:100% !important;
+    height:100% !important;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Infrastructure & Subsurface Sensing</h1>
+
+<h2>📡 What is It?</h2>
+<p>
+Infrastructure and Subsurface Sensing uses advanced technologies to detect, analyze, and monitor underground and surface structures. 
+It helps in identifying pipelines, cables, water systems, and structural weaknesses before failures occur.
+</p>
+
+<h2>🔬 Technologies Used</h2>
+<p>
+Ground Penetrating Radar (GPR), LiDAR, Seismic Sensors, Acoustic Sensors, Fiber Optic Monitoring, and AI-based data analytics are widely used.
+</p>
+
+<div class="chart-container">
+<canvas id="pieChart"></canvas>
+</div>
+
+<h2>📊 Technology Usage Distribution</h2>
+
+<h2>🏗 Applications</h2>
+<p>
+Used in smart cities, oil & gas pipelines, metro construction, airport runways, military defense, and underground utility mapping.
+</p>
+
+<div class="chart-container">
+<canvas id="barChart"></canvas>
+</div>
+
+<h2>📈 Infrastructure Monitoring Growth</h2>
+
+<h2>📊 Analytics</h2>
+<p>
+AI-powered systems analyze underground data in real-time. Predictive analytics prevents accidents and reduces maintenance costs.
+</p>
+
+<h2>🚀 Future Scope</h2>
+<p>
+Future systems will integrate satellite imaging, drone mapping, and machine learning for highly accurate 3D underground visualization.
+Fun Fact: Modern GPR can detect objects up to 100 feet underground!
+</p>
+
+<br>
+
+<button onclick="alert('Subsurface sensing prevents disasters before they happen!')">Learn More</button>
+<button onclick="alert('AI improves detection accuracy by over 85%!')">Analytics</button>
+<button onclick="alert('Future cities will use full underground digital mapping!')">Future</button>
+
+<script>
+
+// PIE CHART
+new Chart(document.getElementById("pieChart"), {
+    type: 'pie',
+    data: {
+        labels: ["GPR","LiDAR","Seismic","AI Systems","Fiber Optics"],
+        datasets: [{
+            data: [30,20,15,25,10],
+            backgroundColor: [
+                "#ff0000",
+                "#00ff00",
+                "#0000ff",
+                "#ffff00",
+                "#ff00ff"
+            ]
+        }]
+    },
+    options:{
+        responsive:true,
+        maintainAspectRatio:false
+    }
+});
+
+// BAR CHART
+new Chart(document.getElementById("barChart"), {
+    type: 'bar',
+    data: {
+        labels: ["2022","2023","2024","2025","2026"],
+        datasets: [{
+            label:"Market Growth (%)",
+            data:[10,15,22,30,40],
+            backgroundColor:[
+                "#ff5733",
+                "#33ff57",
+                "#3357ff",
+                "#f1c40f",
+                "#9b59b6"
+            ]
+        }]
+    },
+    options:{
+        responsive:true,
+        maintainAspectRatio:false,
+        scales:{
+            y:{
+                beginAtZero:true
+            }
+        }
+    }
+});
+
+</script>
+
+</body>
+</html>
